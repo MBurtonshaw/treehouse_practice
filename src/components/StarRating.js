@@ -15,13 +15,15 @@ class StarRating extends Component {
         const starArray = [];
         for (let i = 0; i < this.state.shellStars; i++) {
             this.key = i;
-            starArray.push(<Star key={this.key+1} onClick={this.ratingHandler()}/>);
+            starArray.push(<Star key={this.key+1} onClick={() => {this.ratingHandler()}}/>);
         } return(starArray);
     }
     
   // Write an event handler that updates the rating state.
     ratingHandler = (props) => {
-        console.log('yo');
+        return(
+            console.log('yo')
+        );
     }
   // Pass the function to a Star component via props
 
